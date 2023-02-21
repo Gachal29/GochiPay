@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div id="qrcode">
+</div>
+
+<script>
+    document.addEventListener("load", viewQRcode("{{payment_id}}"))
+</script>
+{% endblock %}
