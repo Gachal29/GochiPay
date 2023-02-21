@@ -25,7 +25,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-CREATED_APPS = []
+CREATED_APPS = [
+    "gochipay.shop"
+]
 
 INSTALLED_APPS += CREATED_APPS
 
@@ -92,5 +94,8 @@ STATICFILES_DIRS = [
     ("styles", BASE_DIR / "styles"),
     ("js", BASE_DIR / "js"),
 ]
+
+MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_URL = '/media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
