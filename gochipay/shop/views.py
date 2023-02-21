@@ -4,7 +4,7 @@ from django.views.generic import TemplateView
 
 
 class PaymentView(TemplateView):
-    template_name = "base.html"
+    template_name = "shop.html"
 
     def get_context_data(self, **kwargs: any) -> dict[str, any]:
         context = super().get_context_data(**kwargs)
@@ -18,5 +18,7 @@ class PaymentView(TemplateView):
         )
 
         payment.save()
+
+        context["payment_id"] = payment.id
 
         return context
