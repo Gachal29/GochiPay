@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from gochipay.shop.models import Payments, Shops
 from django.views.generic import TemplateView
 
@@ -20,5 +19,20 @@ class PaymentView(TemplateView):
         payment.save()
 
         context["payment_id"] = payment.id
+
+        return context
+
+
+class PaidView(TemplateView):
+    template_name = "paid.html"
+
+    def get_context_data(self, **kwargs: any) -> dict[str, any]:
+        context = super().get_context_data(**kwargs)
+
+        payment_id = self.request.GET.get("payment_id")
+
+        payment = Payments.objects.get(id=payment_id)
+        context["shop"] = payment.shop
+        context["price"] = payment.price
 
         return context

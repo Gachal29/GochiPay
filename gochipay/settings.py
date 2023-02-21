@@ -26,7 +26,8 @@ INSTALLED_APPS = [
 ]
 
 CREATED_APPS = [
-    "gochipay.shop"
+    "gochipay.shop",
+    "gochipay.user",
 ]
 
 INSTALLED_APPS += CREATED_APPS

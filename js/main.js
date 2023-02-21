@@ -36,7 +36,7 @@ window.onload = (e) => {
             if (code) {
                 drawRect(code.location);// Rect
                 msg.innerText = code.data;// Data
-                location.href = `${location.protocol}//${location.host}/shop/paid?id=${code.data}`
+                location.href = `${location.protocol}//${location.host}/shop/paid?payment_id=${code.data}`
             } else {
                 msg.innerText = "Detecting QR-Code...";
             }
