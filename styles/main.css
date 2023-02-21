@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (max-width: 767px) { 
+
+.container {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.header-contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+#msg {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.canvas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#canvas {
+    width: 30vw;
+    height: 30vw;
+    min-width: 300px;
+    min-height: 300px;
+}
+
+.image img{
+    width: 100vw;
+    height: auto;
+}
+
+dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+dl dt {
+  width: 40%;
+}
+dl dd {
+  width: 60%;
+}
+
+
+}
