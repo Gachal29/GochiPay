@@ -1,24 +1,11 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gochi pay</title>
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
-
-<body>
-    <h1>jsQR</h1>
-    <div id="wrapper">
-        <div id="msg">Unable to access video stream.</div>
-        <div class="canvas">
-            <canvas id="canvas-id"></canvas>
-        </div>
+{% block main %}
+<h1>jsQR</h1>
+<div id="wrapper">
+    <div id="msg">Unable to access video stream.</div>
+    <div class="canvas">
+        <canvas id="canvas-id"></canvas>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-    <script src="../js/main.js"></script>
-</body>
-
-</html>
+</div>
+{% endblock %}

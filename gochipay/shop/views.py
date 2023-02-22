@@ -1,5 +1,7 @@
-from gochipay.shop.models import Payments, Shops
+from gochipay.shop.models import Payments, Shops, Reviewes
 from django.views.generic import TemplateView
+from django.shortcuts import redirect
+from django.urls import reverse
 
 
 class PaymentView(TemplateView):
@@ -41,6 +43,29 @@ class PaidView(TemplateView):
 class WriteView(TemplateView):
     template_name = "write.html"
 
+    def post(self, request):
+        title = request.POST.get("title")
+        message = request.POST.get("message")
+
+        review = Reviewes.objects.create(
+            title = title,
+            message = message
+        )
+
+        review.save()
+
+        return redirect(reverse("top"))
+
 
 class ReviewView(TemplateView):
     template_name = "review.html"
+
+    def get_context_data(self, **kwargs: any) -> dict[str, any]:
+        context = super().get_context_data(**kwargs)
+
+        shops = Shops.objects.all()
+
+        context["shop"] = shops.first()
+        context["reviews"] = Reviewes.objects.all()
+
+        return context
