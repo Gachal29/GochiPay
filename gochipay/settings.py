@@ -94,6 +94,7 @@ STATIC_ROOT = BASE_DIR / "static"
 STATICFILES_DIRS = [
     ("styles", BASE_DIR / "styles"),
     ("js", BASE_DIR / "js"),
+    ("images", BASE_DIR / "images"),
 ]
 
 MEDIA_ROOT = BASE_DIR / 'media'

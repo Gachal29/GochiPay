@@ -18,9 +18,14 @@
     background-color: #fff;
 }
 
+.header-contents h2{
+  font-family: 'Hiragino Kaku Gothic ProN';
+}
+
 #msg {
     text-align: center;
     margin-top: 100px;
+    font-family: menlo;
 }
 
 .canvas {
@@ -58,4 +63,34 @@ dl dd {
 .star {
   font-size: 200%;
   color: #a09a9a;
+}
+
+.howto {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(73, 72, 72, 0.28);
+  width: 100vw;
+  bottom: 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.howto div img {
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+}
+.howto div {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.howto div p {
+  margin-top: 50px;
+}
+
+.canvas canvas{
+  border: solid 3px black;
 }
