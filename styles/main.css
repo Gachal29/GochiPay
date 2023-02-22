@@ -94,3 +94,23 @@ dl dd {
 .canvas canvas{
   border: solid 3px black;
 }
+
+.qrcontainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #be76be;
+}
+
+#qrcode img{
+    border: solid 10px #fff;
+    border-radius: 15px;
+}
+
+#qrcode {
+  text-align: center;
+  color:white;
+}

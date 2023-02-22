@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
 {% block main %}
-<div id="qrcode">
+<div class="qrcontainer">
+    <div id="qrcode">
+        <h1 id="store">Gochi pay加盟店</h1>
+    </div>
 </div>
+
 
 <script>
     document.addEventListener("load", viewQRcode("{{payment_id}}"))
