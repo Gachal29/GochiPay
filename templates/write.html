@@ -1,21 +1,13 @@
-<!DOCTYPE html>
-<html lang="ja">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gochi pay</title>
-    <link rel="stylesheet" href="../styles/main.css">
-</head>
-
+{% block main %}
 <body>
     <div class="container">
         <div class="header-contents">
             <h2>口コミ入力画面</h2>
         </div>
         <div class="wrapper">
-            <form action="" method="post">
+            <form action="{% url 'write' %}" method="post">{% csrf_token %}
                 <div>
                     <label for="title">タイトル</label>
                     <input type="text" id="title" name="title">
@@ -28,7 +20,4 @@
             </form>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
-    <script src="../js/main.js"></script>
-    <script src="../js/review.js"></script>
-</body>
+{% endblock %}

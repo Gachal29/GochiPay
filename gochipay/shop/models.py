@@ -29,3 +29,16 @@ class Payments(models.Model):
 
     def __str__(self):
         return f"{self.id}: {self.shop} <{self.date}>"
+
+
+class Reviewes(models.Model):
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    title = models.CharField(max_length=150, verbose_name="タイトル")
+    message = models.CharField(max_length=2048, verbose_name="本文")
+
+    class Meta:
+        verbose_name = "口コミ"
+        verbose_name_plural = verbose_name
+
+    def __str__(self):
+        return f"{self.title}"
