@@ -36,3 +36,11 @@ class PaidView(TemplateView):
         context["price"] = payment.price
 
         return context
+
+
+class WriteView(TemplateView):
+    template_name = "write.html"
+
+
+class ReviewView(TemplateView):
+    template_name = "review.html"
