@@ -24,7 +24,7 @@ window.onload = (e) => {
             if (code) {
                 drawRect(code.location);// Rect
                 msg.innerText = code.data;// Data
-                location.href = `${location.protocol}//${location.host}/shop/paid?id=${code.data}`
+                location.href = `${location.protocol}//${location.host}/shop/paid?paymentid=${code.data}`
             } else {
                 msg.innerText = "Detecting QR-Code...";
             }
@@ -48,3 +48,9 @@ window.onload = (e) => {
         ctx.stroke();
     }
 }
+
+
+async function postData(url = location.href) {
+    const res = await fetch(url)
+}
+

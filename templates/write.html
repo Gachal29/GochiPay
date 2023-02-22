@@ -12,22 +12,23 @@
 <body>
     <div class="container">
         <div class="header-contents">
-            <h2>QR読み取り</h2>
+            <h2>口コミ入力画面</h2>
         </div>
         <div class="wrapper">
-            <div class="wrapper-read">
-                <div id="msg">カメラに接続しています...</div>
-                <div class="canvas">
-                    <canvas id="canvas"></canvas>
+            <form action="" method="post">
+                <div>
+                    <label for="title">タイトル</label>
+                    <input type="text" id="title" name="title">
                 </div>
-            </div>
+                <div>
+                    <label for="review">口コミ内容</label>
+                </div>
+                <textarea id="review" name="message"></textarea>
+                <input type="submit" value="送信する">
+            </form>
         </div>
     </div>
-
-
-
-
-
     <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/review.js"></script>
 </body>
